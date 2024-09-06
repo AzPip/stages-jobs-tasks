@@ -13,8 +13,8 @@ stages:
     steps:
     - script: echo building frontend app
       displayName: build frontend app
-    - script: echo running unit tests for frontend app
-      displayName: unit tests frontend
+    # - script: echo running unit tests for frontend app
+    #   displayName: unit tests frontend
 
   # - job: BuildBackendApp
   #   displayName: Build Backend App
@@ -24,14 +24,14 @@ stages:
   #   - script: echo running unit tests for backend app
   #     displayName: unit tests backend
 
-- stage: DeployDev
-  displayName: Deploy to DEV environment
-  jobs:
-  - job: DeployFrontendDev
-    displayName: Deploy frontend to DEV
-    steps:
-    - script: echo deploying frontend app to DEV
-      displayName: deploy frontend app to DEV
+# - stage: DeployDev
+#   displayName: Deploy to DEV environment
+#   jobs:
+#   - job: DeployFrontendDev
+#     displayName: Deploy frontend to DEV
+#     steps:
+#     - script: echo deploying frontend app to DEV
+#       displayName: deploy frontend app to DEV
 
   # - job: DeployBackendDev
   #   displayName: Deploy backend to DEV
@@ -39,16 +39,16 @@ stages:
   #   - script: echo deploying backend app to DEV
   #     displayName: deploy backend app to DEV
 
-- stage: DeployProd
-  displayName: Deploy to PROD environment
-  pool:
-    vmImage: 'macOS-10.14'
-  jobs:
-  - job: DeployFrontendProd
-    displayName: Deploy frontend to PROD
-    steps:
-    - script: echo deploying frontend app to PROD
-      displayName: deploy frontend app to PROD
+# - stage: DeployProd
+#   displayName: Deploy to PROD environment
+#   pool:
+#     vmImage: 'macOS-10.14'
+#   jobs:
+#   - job: DeployFrontendProd
+#     displayName: Deploy frontend to PROD
+#     steps:
+#     - script: echo deploying frontend app to PROD
+#       displayName: deploy frontend app to PROD
 
   # - job: DeployBackendProd
   #   displayName: Deploy backend to PROD
